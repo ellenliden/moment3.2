@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Färdtjänst</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="icons/logo.png" alt="Logotyp med bilikon" />
+        </a>
+      </div>
+
+      <!-- Hamburgermeny-knapp (för mobil) -->
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- Menyn + Sökfält -->
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="book.html">Boka resa</a>
+          <a href="faq.html">Om Färdtjänst</a>
+          <a href="contact.html">Kontakt</a>
+          <a href="trips.html">Mina resor</a>
+        </div>
+
+        <!-- Sökfältet -->
+        <div class="search-container">
+          <input type="text" placeholder="Sök..." />
+          <button>
+            <img src="icons/find.svg" alt="förstoringsglas" />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="head">
+      <div class="headerImage">
+        <img src="images/header1.png" alt="person sittandes i rullstol" />
+      </div>
+      <h1 class="headerHeading">
+        Boka färdtjänst <br />digitalt eller via telefon
+      </h1>
+      <div class="headerButton">
+        <a href="book.html">
+          <button class="headerButton1">Boka nu</button>
+        </a>
+        <a href="faq.html">
+          <button class="headerButton2">Vanliga frågor</button>
+        </a>
+      </div>
+    </header>
+
+    <!-- Sektion för bokning av färdtjänst -->
+    <section class="booking-section">
+      <h2>Boka Färdtjänst</h2>
+
+      <form action="#" method="post">
+        <!-- Upphämning & destination -->
+        <div class="form-group">
+          <label for="pickup">Upphämning och destination:</label>
+          <input
+            type="text"
+            id="pickup"
+            name="pickup"
+            placeholder="Från"
+            required
+          />
+          <input
+            type="text"
+            id="destination"
+            name="destination"
+            placeholder="Till"
+            required
+          />
+        </div>
+
+        <!-- Datum -->
+        <div class="form-group">
+          <label for="date">Datum:</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <!-- Tid -->
+        <div class="form-group">
+          <label for="time">Tid:</label>
+          <input
+            type="time"
+            id="time"
+            name="time"
+            required
+            placeholder="--:--"
+          />
+        </div>
+
+        <!-- Upprepa resa -->
+        <div class="form-group">
+          <label for="repeat">Upprepa resa:</label>
+          <select id="repeat" name="repeat">
+            <option value="none">Ej återkommande</option>
+            <option value="everyday">Varje dag</option>
+            <option value="weekday">Varje vardag</option>
+            <option value="weekly">Varje vecka</option>
+            <option value="monthly">Varje månad</option>
+          </select>
+        </div>
+
+        <!-- Rullstolsanpassad bil och rullator -->
+        <div class="form-group">
+          <input type="checkbox" id="wheelchair" name="wheelchair" />
+          <label for="wheelchair">Rullstolsanpassad bil</label>
+          <input type="checkbox" id="walker" name="walker" />
+          <label for="walker">Rullator</label>
+        </div>
+
+        <!-- Lägg till returresa -->
+        <div class="form-group">
+          <a href="#" id="add-return" class="add-return-link"
+            >Lägg till returresa +</a
+          >
+        </div>
+
+        <!-- Returresa fält -->
+        <div id="return-fields" class="hidden">
+          <h3>Returresa</h3>
+
+          <div class="form-group">
+            <label for="return-date">Returdatum:</label>
+            <input type="date" id="return-date" name="return-date" required />
+          </div>
+
+          <div class="form-group">
+            <label for="return-time">Returtid:</label>
+            <input
+              type="time"
+              id="return-time"
+              name="return-time"
+              required
+              placeholder="--:--"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="return-repeat">Upprepa returresa:</label>
+            <select id="return-repeat" name="return-repeat">
+              <option value="none">Ej återkommande</option>
+              <option value="everyday">Varje dag</option>
+              <option value="weekday">Varje vardag</option>
+              <option value="weekly">Varje vecka</option>
+              <option value="monthly">Varje månad</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Boka knapp -->
+        <div class="form-group">
+          <button type="submit" class="book-button">Boka resa</button>
+        </div>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+
+  <!-- Footer -->
+  <footer>
+    <p>Laborationsuppgift för kursen DT200G, Grafisk design för webb.</p>
+    <p>© Copyright Ellen Lidén 2024</p>
+  </footer>
+</html>

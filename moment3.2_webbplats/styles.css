@@ -1,0 +1,667 @@
+/* Allmän styling */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+/* Meny */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1rem 5%;
+  box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.1);
+}
+
+/* Logotyp */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 3.6rem;
+  margin-right: 2vw;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Navigation + sökfält */
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  margin: 0 auto;
+}
+
+/* Menylänkar */
+.navbar .nav-links {
+  display: flex;
+  gap: 4vw;
+  font-size: 1rem;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2557a2;
+  font-weight: 700;
+}
+
+/* Sökfält */
+.navbar .search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10vw;
+  padding: 0.5rem;
+  margin-left: 2vw;
+  width: 20vw;
+  max-width: 16rem;
+}
+
+.navbar .search-container input[type="text"] {
+  border: none;
+  outline: none;
+  font-style: italic;
+  padding: 0.3rem 1rem;
+}
+
+.navbar .search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar .search-container button img {
+  height: 2vh;
+  width: 2vw;
+}
+
+/* Hamburgermeny (döljs på desktop) */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+}
+
+/* Header */
+
+.headerImage {
+  position: relative;
+  width: 100%;
+  height: 46vh;
+  overflow: hidden;
+  margin-bottom: 8vh;
+}
+
+.headerImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headerHeading {
+  color: #ffffff;
+  position: absolute;
+  top: 24vh;
+  left: 10%;
+  font-size: 2.2rem;
+}
+
+.headerButton {
+  position: absolute;
+  top: 42vh;
+  left: 10%;
+}
+
+button {
+  border: none;
+  border-radius: 10vw;
+  padding: 0.5rem 1.8rem;
+  font-size: 1rem;
+}
+
+.headerButton1 {
+  background-color: #ffffff;
+  color: #000;
+  margin-right: 1rem;
+}
+
+.headerButton2 {
+  background-color: #2557a2;
+  color: #ffffff;
+}
+
+.headerButton1:hover {
+  background-color: #e0ebfc;
+  transform: scale(1.05);
+}
+
+.headerButton2:hover {
+  background-color: #1b437e;
+  transform: scale(1.05);
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Sektion med två grå rutor */
+.info-section {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 12vh;
+  margin-top: 8vh;
+}
+
+.info-box {
+  flex: 1;
+  background-color: #f3f3f3;
+  border-radius: 0;
+  padding: 2rem;
+  text-align: center;
+  max-width: 50%;
+}
+
+.info-box h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.info-box p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-link {
+  display: inline-block;
+  text-decoration: underline;
+  color: #2557a2;
+  transition: color 0.3s ease;
+}
+
+.info-link:hover {
+  color: #1b437e;
+}
+
+.icon {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.info-icon,
+.confirm-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+/* FAQ-sektion */
+.faq-section {
+  max-width: 80%;
+  margin: 3rem auto;
+  font-family: "Roboto", sans-serif;
+}
+
+.faq-item {
+  border: none;
+  margin-bottom: 0.6rem;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  background-color: #e0ebfc;
+}
+
+.faq-question:hover {
+  background-color: #1b437e;
+  color: #ffffff;
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+/* Dolda svar som standard */
+.faq-answer {
+  display: none;
+  padding: 1.2rem 1.8rem;
+  background-color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: none;
+}
+
+/* Rotera pilen till höger */
+.faq-item.active .faq-arrow {
+  transform: rotate(90deg);
+}
+
+/* Visa svaret vid klick (i FAQ-sektionen) */
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-link {
+  float: right;
+  text-decoration: underline;
+  color: #2557a2;
+  transition: color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.faq-link:hover {
+  color: #1b437e;
+}
+
+/* Sektion med två grå rutor */
+.contact-info-section {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* Gör kontakt rutorna lika stora */
+.contact-info-box {
+  flex: 1;
+  background-color: #f3f3f3;
+  border-radius: 0;
+  padding: 2rem;
+  text-align: center;
+  max-width: 20rem;
+}
+
+.contact-info-box h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.contact-info-box p {
+  font-size: 1.2rem;
+  color: #000000;
+  line-height: 1.5;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.small-info-icon {
+  height: auto;
+  width: 1rem;
+  margin-right: 0.2rem;
+}
+
+.trips-section {
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.trip {
+  border: none;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.trip-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: #2557a2;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.trip-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.trip-content {
+  display: none; /* Dold som standard */
+  padding: 1.8rem;
+  background-color: #ffffff;
+}
+
+.trip-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+}
+
+.trip-content th {
+  background-color: #c1c1c1;
+  color: #000000;
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 300;
+  border: 1px solid black;
+}
+
+.trip-content td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #000000;
+}
+
+.trip-actions {
+  text-align: right;
+}
+.trip-link i {
+  margin-right: 0.4rem;
+}
+
+.trip-link {
+  color: #2557a2;
+  text-decoration: underline;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
+.trip-link:hover {
+  color: #1b437e;
+}
+
+.trip.active .trip-content {
+  display: block;
+}
+
+/* Rotera pilen vid klick */
+.trip.active .trip-arrow {
+  transform: rotate(90deg);
+}
+
+/* Popup-stilar */
+.popup {
+  display: none; /* Döljer popupen från början */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Mörk bakgrund */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Gör att popupen hamnar över allt annat */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 3.5rem;
+  position: relative;
+  max-width: 30%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.6rem;
+  font-size: 1.6rem;
+  color: #000;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.booking-section {
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 4.5rem;
+  padding: 3.2rem;
+  background-color: #ffffff;
+  border: solid #000000;
+  background-color: #e0ebfc;
+  font-weight: 400;
+}
+
+.booking-section h2 {
+  margin-bottom: 2.8rem;
+  margin-top: 0.6rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  margin-top: 2rem;
+  display: block;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  border: 1px solid #464646;
+  color: #8f8f8f;
+  font-weight: 300;
+  width: 100%; /* Justera för padding */
+  box-sizing: border-box; /* Säkerställ att padding inte påverkar bredden */
+  margin: 0; /* Ta bort auto-marginaler */
+}
+
+/* Applicera styling på checkboxar, text bredvid checkbox*/
+.form-group input[type="checkbox"] + label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  border-radius: 100px;
+}
+
+/* Avstånd mellan checkbox och text */
+.form-group input[type="checkbox"] {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.booking-section button {
+  background-color: #2557a2;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.add-return-link {
+  background-color: transparent;
+  color: #2557a2;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.add-return-link:hover {
+  font-weight: bold;
+}
+
+/* Dölj returresafält */
+.hidden {
+  display: none;
+}
+
+.book-button {
+  width: 100%; /* Justera för padding */
+  background-color: #1b437e;
+}
+
+.book-button:hover {
+  background-color: #1b437e;
+}
+
+/*styling av footer*/
+footer {
+  margin-top: 8rem;
+  background-color: #2557a2;
+  padding: 1.8rem;
+}
+
+footer p {
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Anpassning för mobil */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    display: none; /* Dölj menyn som standard */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 5.8rem; /* Justera så att menyn visas direkt under navbaren */
+    right: 0;
+    background-color: #2557a2;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    z-index: 1000; /* Säkerställ att menyn är över andra element */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    margin-top: 0.8rem;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1rem;
+  }
+
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: color 0.2s ease;
+    font-size: 1.1rem;
+  }
+
+  .nav-links a:hover {
+    font-weight: 600;
+  }
+
+  .search-container {
+    justify-content: center;
+    padding: 2rem;
+    min-width: 50%;
+    background-color: #ffffff;
+    margin-bottom: 2rem;
+    margin-top: 0.2rem;
+  }
+
+  .navbar .search-container button img {
+    height: 3vh;
+    width: 3vw;
+    margin-right: 0.6rem;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-container.active {
+    display: flex;
+  }
+
+  /* mobilanpassa infosektionen på startsida*/
+  .info-section {
+    display: block;
+    margin-top: 3rem;
+    min-width: 80%;
+  }
+
+  .info-box {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .icon {
+    margin-bottom: 2rem;
+    margin-top: 0.6rem;
+  }
+
+  /* Mobilanpassa bokningssidan */
+  .booking-section {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 4.5rem;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border: solid #000000;
+    background-color: #e0ebfc;
+    font-weight: 400;
+  }
+
+  /* Mobilanpassning för kontaktboxar - ändra från flex till block för att göra rutorna vertikala*/
+  .contact-info-section {
+    display: block;
+    margin-top: 2rem;
+    min-width: 80%;
+  }
+
+  /* Gör att kontaktboxarna får större bredd på små skärmar */
+  .contact-info-box {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}
